@@ -32,3 +32,10 @@
 
  **Демо:**
 [![asciicast](https://asciinema.org/a/390173.svg)](https://asciinema.org/a/390173)
+
+### Игра "Арифметическая прогрессия"
+
+ Игроку необходимо опледелить пропущенное чисто в арифметической прогрессии.
+
+ **Демо:**
+[![asciicast](https://asciinema.org/a/390177.svg)](https://asciinema.org/a/390177)
