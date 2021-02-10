@@ -2,7 +2,7 @@ from typing import Tuple
 from random import randint
 
 RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-_MIN_NUMBER = 1
+_MIN_NUMBER = 2
 _MAX_NUMBER = 150
 
 
