@@ -1,12 +1,15 @@
 #!/usr/bin/env python
-from brain_games.cli import welcome_user
+import prompt
 from brain_games.games import prime as game
-from brain_games.games.base import game_flow
+from brain_games.game_flow import start_game
 
 
 def main():
-    name = welcome_user()
-    game_flow(game, name)
+    """Функция, запускающая игру."""
+    print('Welcome to the Brain Games!')
+    player_name = prompt.string('May I have your name? ')
+    print('Hello, {0}!'.format(player_name))
+    start_game(game, player_name)
 
 
 if __name__ == '__main__':

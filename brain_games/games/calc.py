@@ -3,7 +3,7 @@ from random import randint, choice
 
 import operator
 
-RULES = 'What is the result of the expression?'
+RULE = 'What is the result of the expression?'
 _MIN_NUMBER = 0
 _MAX_NUMBER = 10
 _OPERATIONS = {
@@ -13,7 +13,8 @@ _OPERATIONS = {
 }
 
 
-def get_question() -> Tuple[str, int]:
+def get_question_and_answer() -> Tuple[str, int]:
+    """Формирование вопроса и правильного ответа для раунда игры."""
     operand_one = randint(_MIN_NUMBER, _MAX_NUMBER)
     operand_two = randint(_MIN_NUMBER, _MAX_NUMBER)
     operation = choice(list(_OPERATIONS.keys()))
@@ -21,10 +22,3 @@ def get_question() -> Tuple[str, int]:
     question = '{0} {1} {2}'.format(operand_one, operation, operand_two)
 
     return question, answer
-
-
-def is_right_answer(answer: str, right_answer: int) -> bool:
-    if answer.lstrip('-').isdigit() and int(answer) == right_answer:
-        return True
-
-    return False
