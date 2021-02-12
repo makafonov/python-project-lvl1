@@ -1,5 +1,3 @@
-from typing import Optional
-
 import prompt
 
 _ATTEMPTS = 3
@@ -9,8 +7,11 @@ _UNSUCCESSFUL_MESSAGE = (
 )
 
 
-def start_game(game, player_name: Optional[str]) -> None:
+def start_game(game) -> None:
     """Игровой движок, описывающий общий порядок выполнения игр."""
+    print('Welcome to the Brain Games!')
+    player_name = prompt.string('May I have your name? ')
+    print('Hello, {0}!'.format(player_name))
     print(game.RULE)
     for _ in range(_ATTEMPTS):
         question, right_answer = game.get_question_and_answer()
